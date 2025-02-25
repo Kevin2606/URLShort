@@ -1,11 +1,23 @@
 ---
-import Welcome from '../components/Welcome.astro';
-import Layout from '../layouts/Layout.astro';
-
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+import Layout from "../layouts/Layout.astro";
+import Header from "../components/Header.astro";
+import URLShortener from "../components/URLShortener.astro";
+import Features from "../components/Features.astro";
 ---
 
-<Layout>
-	<Welcome />
+<Layout title="URLify - URL Shortener">
+  <Header />
+  <main class="container mx-auto py-12">
+    <div class="text-center mb-12">
+      <h1 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+        Acorta tus enlaces<br />y compártelos fácil
+      </h1>
+      <p class="text-xl text-gray-600 max-w-2xl mx-auto">
+        Convierte URLs largas y complicadas en enlaces limpios y memorables, ideales para redes sociales, correo y
+        mensajes.
+      </p>
+    </div>
+    <URLShortener />
+    <Features />
+  </main>
 </Layout>

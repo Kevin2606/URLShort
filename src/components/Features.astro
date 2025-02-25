@@ -1,0 +1,38 @@
+---
+const features = [
+  {
+    title: "Rápido y Fácil",
+    description: "Acorta tus URLs en segundos con nuestra interfaz simple",
+    icon: "⚡"
+  },
+  {
+    title: "Enlaces Personalizados",
+    description: "Crea enlaces cortos memorables y con tu marca",
+    icon: "✨"
+  },
+  {
+    title: "Analíticas",
+    description: "Sigue los clics y analiza el rendimiento de tus enlaces",
+    icon: "📊"
+  },
+  {
+    title: "Seguro",
+    description: "Tus enlaces están protegidos y seguros con nosotros",
+    icon: "🔒"
+  }
+];
+---
+<section class="py-12 px-6">
+  <div class="max-w-6xl mx-auto">
+    <h2 class="text-3xl font-bold text-center text-gray-800 mb-12">¿Porque escoger URLShort?</h2>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+      {features.map(feature => (
+        <div class="bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition-shadow">
+          <div class="text-4xl mb-4">{feature.icon}</div>
+          <h3 class="text-xl font-semibold text-gray-800 mb-2">{feature.title}</h3>
+          <p class="text-gray-600">{feature.description}</p>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
